@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Appreciation</title>
+
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+h2{
+    color:#009688;
+}
+
+p{
+    color:#555;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    margin:12px 0;
+    font-size:17px;
+    font-weight:bold;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+}
+
+.regular{background:#2196F3;}
+.breakdown{background:#FF9800;}
+.accident{background:#E53935;}
+.warranty{background:#4CAF50;}
+
+button:hover{
+    opacity:0.9;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Customer Appreciation</h2>
+
+<p>Please select the service you received.</p>
+
+<button class="regular" onclick="sendMessage(regularMsg)">
+🚗 Regular Vehicle Service
+</button>
+
+<button class="breakdown" onclick="sendMessage(breakdownMsg)">
+🛠 Breakdown Vehicle
+</button>
+
+<button class="accident" onclick="sendMessage(accidentMsg)">
+💥 Accidental Vehicle
+</button>
+
+<button class="warranty" onclick="sendMessage(warrantyMsg)">
+🔧 Warranty Part Replacement
+</button>
+
+<br><br>
+
+<small>
+It takes less than 10 seconds to share your valuable feedback.<br>
+Thank you for choosing VIDA.
+</small>
+
+</div>
+
+<script>
+
+const phone="918956547596";
+
+const regularMsg=`Dear VIDA Team,
+
+I would like to express my sincere appreciation for the excellent service provided during my vehicle's regular service.
+
+The entire service process was smooth and hassle-free. The staff was courteous, explained the work clearly, and delivered my vehicle on time. I am very satisfied with the professionalism and support extended by the service team.
+
+Please convey my thanks to everyone involved. Keep up the great work!
+
+Best Regards,`;
+
+const warrantyMsg=`Dear VIDA Team,
+
+I would like to express my gratitude to the VIDA Service Team for the prompt and hassle-free warranty part replacement for my vehicle.
+
+The entire process was handled professionally, and the required part was replaced without any inconvenience. The team was supportive, transparent, and ensured that my vehicle was ready as quickly as possible.
+
+Thank you for providing such a pleasant service experience. I truly appreciate your efforts.
+
+Best Regards,`;
+
+const breakdownMsg=`Dear VIDA Team,
+
+I would like to express my sincere appreciation for the outstanding support provided by the VIDA Service Team when my vehicle experienced a breakdown.
+
+The team responded promptly, guided me throughout the process, and ensured that my vehicle was attended to without unnecessary delay.
+
+From arranging the required assistance to diagnosing and resolving the issue, everything was handled professionally and efficiently.
+
+I truly appreciate the team's quick response, technical expertise, regular communication, and commitment to getting my vehicle back on the road at the earliest.
+
+Their customer-centric approach made a stressful situation much easier to handle.
+
+Please convey my heartfelt thanks to everyone involved for their dedication and excellent service.
+
+Keep up the great work!
+
+Best Regards,`;
+
+const accidentMsg=`Dear VIDA Team,
+
+I would like to thank the VIDA Service Team for the excellent support provided after my vehicle met with an accident.
+
+The team handled the repair process professionally, arranged the required parts promptly, and restored my vehicle in excellent condition.
+
+Throughout the process, I was kept informed, which gave me confidence and peace of mind.
+
+I truly appreciate the team's dedication and customer-focused approach.
+
+Thank you for the wonderful support.
+
+Best Regards,`;
+
+function sendMessage(message){
+
+const url="https://wa.me/"+phone+"?text="+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
