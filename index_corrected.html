@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Appreciation</title>
+
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+h2{
+    color:#009688;
+}
+
+p{
+    color:#555;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    margin:12px 0;
+    font-size:17px;
+    font-weight:bold;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+}
+
+.regular{background:#2196F3;}
+.breakdown{background:#FF9800;}
+.accident{background:#E53935;}
+.warranty{background:#4CAF50;}
+
+button:hover{
+    opacity:0.9;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Customer Appreciation</h2>
+
+<p>Please select the service you received.</p>
+
+<button class="regular" onclick="sendMessage(regularMsg)">
+🚗 Regular Vehicle Service
+</button>
+
+<button class="breakdown" onclick="sendMessage(breakdownMsg)">
+🛠 Breakdown Vehicle
+</button>
+
+<button class="accident" onclick="sendMessage(accidentMsg)">
+💥 Accidental Vehicle
+</button>
+
+<button class="warranty" onclick="sendMessage(warrantyMsg)">
+🔧 Warranty Part Replacement
+</button>
+
+<br><br>
+
+<small>
+It takes less than 10 seconds to share your valuable feedback.<br>
+Thank you for choosing VIDA.
+</small>
+
+</div>
+
+<script>
+
+const phone="918956547596";
+
+const regularMsg=`Dear VIDA Team,
+
+I would like to thank the entire VIDA Service Team for delivering an outstanding periodic maintenance experience for my vehicle. Every aspect of the service reflected professionalism, efficiency, and a genuine commitment to customer care.
+
+The service process was well planned, the staff was courteous and knowledgeable, and I was kept informed throughout the maintenance visit. I particularly appreciated the team's attention to detail, clear communication, and the care taken to ensure that every recommended inspection and maintenance activity was completed thoroughly.
+
+Receiving my vehicle in excellent condition and within the promised timeline made the entire experience even more satisfying. The team's dedication to quality workmanship and customer satisfaction was evident at every step, making the service experience completely hassle-free.
+
+My sincere appreciation goes to everyone who contributed to maintaining my vehicle with such care and professionalism. Thank you for consistently delivering a service experience that builds confidence and trust in the VIDA brand.
+
+Wishing the entire team continued success and many more happy customers.
+
+Best Regards,`;
+
+const warrantyMsg=`Dear VIDA Team,
+
+I would like to express my gratitude to the VIDA Service Team for the prompt and hassle-free warranty part replacement for my vehicle.
+
+The entire process was handled professionally, and the required part was replaced without any inconvenience. The team was supportive, transparent, and ensured that my vehicle was ready as quickly as possible.
+
+Thank you for providing such a pleasant service experience. I truly appreciate your efforts.
+
+Best Regards,`;
+
+const breakdownMsg=`Dear VIDA Team,
+
+I would like to extend my heartfelt appreciation to the entire VIDA Service Team for the remarkable support provided when my vehicle required urgent technical attention.
+
+From the moment I sought assistance, the team responded with speed, professionalism, and genuine care. They efficiently coordinated the required support, provided timely updates throughout the process, and ensured that the concern was diagnosed and resolved with the highest level of expertise.
+
+Beyond the technical resolution, what impressed me most was the team's sense of ownership and customer-centric mindset. Their clear communication, attention to detail, and commitment to minimizing my inconvenience demonstrated a service culture built on trust, accountability, and excellence.
+
+Experiences like these strengthen customer confidence and create lasting trust in the brand. I would like to sincerely thank every member of the VIDA Service Team who contributed to resolving my concern. Their dedication and exceptional service deserve special recognition.
+
+Wishing the team continued success, and thank you once again for setting such a high benchmark in customer service.
+
+Best Regards,`;
+
+const accidentMsg=`Dear VIDA Team,
+
+I would like to thank the VIDA Service Team for the excellent support provided after my vehicle met with an accident.
+
+The team handled the repair process professionally, arranged the required parts promptly, and restored my vehicle in excellent condition.
+
+Throughout the process, I was kept informed, which gave me confidence and peace of mind.
+
+I truly appreciate the team's dedication and customer-focused approach.
+
+Thank you for the wonderful support.
+
+Best Regards,`;
+
+function sendMessage(message){
+
+const url="https://wa.me/"+phone+"?text="+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
